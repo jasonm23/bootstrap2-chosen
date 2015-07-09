@@ -3,7 +3,7 @@
 ![](https://github.com/alxlit/bootstrap-chosen/raw/master/example.png)
 
 An alternate stylesheet for [Chosen](http://harvesthq.github.com/chosen/). This
-one is supposed to integrate better with Bootstrap.
+one is supposed to integrate better with Bootstrap 2.3.x
 
 ## Usage
 
