@@ -9,19 +9,19 @@
       header { margin: 72px 0 36px; }
       header h1 { font-size: 54px; }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="http://harvesthq.github.com/chosen/chosen/chosen.jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
     <script>
       $(function() {
-        $('.chzn-select').chosen();
-        $('.chzn-select-deselect').chosen({ allow_single_deselect: true });
+        $('.chosen-select').chosen();
+        $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
       });
     </script>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Bootstrap + Chosen</h1>
+        <h1>Bootstrap 2.x / Chosen.jQuery</h1>
       </header>
 
       <div class="page-header">
@@ -36,7 +36,7 @@
         </div>
         <div class="span3">
           <div class="chosen">
-            <select data-placeholder="Choose a Country" class="chzn-select" tabindex="2">
+            <select data-placeholder="Choose a Country" class="chosen-select" tabindex="2">
               <option value=""></option>
               <option value="United States">United States</option>
               <option value="United Kingdom">United Kingdom</option>
@@ -296,7 +296,7 @@
         </div>
         <div class="span3">
           <div class="chosen">
-            <select data-placeholder="Choose a Country" class="chzn-select" multiple tabindex="4">
+            <select data-placeholder="Choose a Country" class="chosen-select" multiple tabindex="4">
               <option value=""></option>
               <option value="United States">United States</option>
               <option value="United Kingdom">United Kingdom</option>
@@ -554,7 +554,7 @@
         <div class="span6">
           <h3>Single Select with Groups</h3>
           <div class="chosen">
-            <select data-placeholder="Your Favorite Football Team" class="chzn-select" tabindex="5">
+            <select data-placeholder="Your Favorite Football Team" class="chosen-select" tabindex="5">
               <option value=""></option>
               <optgroup label="NFC EAST">
                 <option>Dallas Cowboys</option>
@@ -611,7 +611,7 @@
         <div class="span6">
           <h3>Multiple Select with Groups</h3>
           <div class="chosen">
-            <select data-placeholder="Your Favorite Football Teams" class="chzn-select" multiple tabindex="6">
+            <select data-placeholder="Your Favorite Football Teams" class="chosen-select" multiple tabindex="6">
               <option value=""></option>
               <optgroup label="NFC EAST">
                 <option>Dallas Cowboys</option>
@@ -674,7 +674,7 @@
         <div class="span6">
           <h3>Single Select</h3>
           <div class="chosen">
-            <select data-placeholder="Your Favorite Type of Bear" class="chzn-select" tabindex="7">
+            <select data-placeholder="Your Favorite Type of Bear" class="chosen-select" tabindex="7">
               <option value=""></option>
               <option>American Black Bear</option>
               <option>Asiatic Black Bear</option>
@@ -691,7 +691,7 @@
         <div class="span6">
           <h3>Multiple Select</h3>
           <div class="chosen">
-            <select data-placeholder="Your Favorite Types of Bear" multiple class="chzn-select" tabindex="8">
+            <select data-placeholder="Your Favorite Types of Bear" multiple class="chosen-select" tabindex="8">
               <option value=""></option>
               <option>American Black Bear</option>
               <option>Asiatic Black Bear</option>
@@ -713,7 +713,7 @@
       <div class="row">
         <div class="span12">
           <div class="chosen">
-            <select data-placeholder="Your Favorite Type of Bear" class="chzn-select-deselect" tabindex="7">
+            <select data-placeholder="Your Favorite Type of Bear" class="chosen-select-deselect" tabindex="7">
               <option value=""></option>
               <option>American Black Bear</option>
               <option>Asiatic Black Bear</option>

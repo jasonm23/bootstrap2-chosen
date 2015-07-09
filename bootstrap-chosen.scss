@@ -1,5 +1,5 @@
 //
-// bootstrap-chosen.less
+// bootstrap-chosen.scss
 //
 // An alternate stylesheet for Chosen (http://harvesthq.github.com/chosen/).
 // This one is supposed to integrate better with Bootstrap.
@@ -7,18 +7,18 @@
 // Submit bugfixes to: http://github.com/alxlit/bootstrap-chosen
 //
 
-$chznBackground: $inputBackground;
-$chznBorder: $inputBorder;
-$chznBorderRadius: $inputBorderRadius;
-$chznBoxShadow: #{"inset 0 1px 1px rgba(0, 0, 0, .075)"};
-$chznDropBorder: $grayLight;
-$chznDropBoxShadow: #{"0 8px 8px rgba(0, 0, 0, .25)"};
-$chznDropZIndex: 1060;
-$chznFocusBorder: rgba(82, 168, 236, .8);
-$chznFocusBoxShadow: #{"0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6)"};
-$chznFocusTransition: #{"border linear .2s, box-shadow linear .2s"};
-$chznHeight: $baseLineHeight + 8px; // 4px padding
-$chznSpritePath: "chosen-sprite.png";
+$chosenBackground: $inputBackground;
+$chosenBorder: $inputBorder;
+$chosenBorderRadius: $inputBorderRadius;
+$chosenBoxShadow: #{"inset 0 1px 1px rgba(0, 0, 0, .075)"};
+$chosenDropBorder: $grayLight;
+$chosenDropBoxShadow: #{"0 8px 8px rgba(0, 0, 0, .25)"};
+$chosenDropZIndex: 1060;
+$chosenFocusBorder: rgba(82, 168, 236, .8);
+$chosenFocusBoxShadow: #{"0 1px 1px rgba(0, 0, 0, .075) inset, 0 0 8px rgba(82, 168, 236, .6)"};
+$chosenFocusTransition: #{"border linear .2s, box-shadow linear .2s"};
+$chosenHeight: $baseLineHeight + 8px; // 4px padding
+$chosenSpritePath: "chosen-sprite.png";
 
 .chosen            { width: 220px; }
 .chosen-mini       { width: 70px; }
@@ -30,28 +30,29 @@ $chznSpritePath: "chosen-sprite.png";
 
 .chosen-container {
   display: inline-block;
-  .ie7-inline-block;
+  // .ie7-inline-block;
   font-size: $baseFontSize;
   position: relative;
   vertical-align: middle;
 
   .chosen-drop {
-    background: $chznBackground;
-    border: 1px solid $chznDropBorder;
-    border-top-color: lighten($chznDropBorder, 25%);
-    @include border-radius($chznBorderRadius);
+    background: $chosenBackground;
+    border: 1px solid $chosenDropBorder;
+    border-top-color: lighten($chosenDropBorder, 25%);
+    @include border-radius($chosenBorderRadius);
     -webkit-border-top-left-radius: 0;
     -webkit-border-top-right-radius: 0;
     -moz-border-radius-topleft: 0;
     -moz-border-radius-topright: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    @include box-shadow($chznDropBoxShadow);
+    @include box-shadow($chosenDropBoxShadow);
     margin-top: -1px;
     position: absolute;
     top: 100%;
     left: -9000px;
-    z-index: $chznDropZIndex;
+    z-index: $chosenDropZIndex;
+    width: 99%;
   }
 
   &.chosen-with-drop .chosen-drop {
@@ -73,7 +74,7 @@ $chznSpritePath: "chosen-sprite.png";
       line-height: $baseLineHeight; // 15px;
       list-style: none;
       margin: 0;
-      padding: 5px 6px;
+      padding: 5px 10px 6px 5px;
 
       em {
         background: #feffde;
@@ -135,34 +136,35 @@ $chznSpritePath: "chosen-sprite.png";
     bottom: 0;
 
     span {
-      background: url("${chznSpritePath}") no-repeat -4px -3px;
+      background: url("#{$chosenSpritePath}") no-repeat -4px -3px;
     }
   }
 
   .chosen-results-scroll-up {
     span {
-      background: url("${chznSpritePath}") no-repeat -22px -3px;
+      background: url("#{$chosenSpritePath}") no-repeat -22px -3px;
     }
   }
 }
 
 .chosen-container-single {
   .chosen-single {
-    background-color: $chznBackground;
-    #gradient > @include vertical($white, $grayLighter);
+    background-color: $chosenBackground;
+    // #gradient > @include vertical($white, $grayLighter);
     //@include border-radius(5px);
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding;
             background-clip: padding-box;
-    border: 1px solid $chznBorder;
-    @include box-shadow($chznBoxShadow);
+    border: 1px solid $chosenBorder;
+    @include box-shadow($chosenBoxShadow);
     color: $gray;
     display: block;
-    height: $chznHeight;
+    height: $chosenHeight;
     overflow: hidden;
-    line-height: $chznHeight;
+    line-height: $chosenHeight;
     padding: 0 0 0 8px;
     position: relative;
+    border-radius: 4px;
     text-decoration: none;
     white-space: nowrap;
 
@@ -173,7 +175,7 @@ $chznSpritePath: "chosen-sprite.png";
     }
 
     abbr {
-      background: url("${chznSpritePath}") right top no-repeat;
+      background: url("#{$chosenSpritePath}") right top no-repeat;
       display: block;
       font-size: 1px;
       height: 10px;
@@ -200,7 +202,7 @@ $chznSpritePath: "chosen-sprite.png";
       width: 18px;
 
       b {
-        background: url("${chznSpritePath}") no-repeat 0 2px;
+        background: url("#{$chosenSpritePath}") no-repeat 0 2px;
         display: block;
         height: 100%;
         width: 100%;
@@ -220,18 +222,19 @@ $chznSpritePath: "chosen-sprite.png";
     z-index: $zindexDropdown;
 
     input {
-      background: url("${chznSpritePath}") no-repeat 100% -21px, $chznBackground;
-      border: 1px solid $chznBorder;
-      @include border-radius($chznBorderRadius);
-      @include box-shadow($chznBoxShadow);
+      background: url("#{$chosenSpritePath}") no-repeat 100% -21px, $chosenBackground;
+      border: 1px solid $chosenBorder;
+      @include border-radius($chosenBorderRadius);
+      @include box-shadow($chosenBoxShadow);
       margin: 1px 0;
       padding: 4px 20px 4px 4px;
+      width: 90%;
     }
   }
 
   .chosen-drop {
     margin-top: -1px;
-    @include border-radius($chznBorderRadius);
+    @include border-radius($chosenBorderRadius);
     -webkit-border-top-left-radius: 0;
     -webkit-border-top-right-radius: 0;
     -moz-border-radius-topleft: 0;
@@ -255,10 +258,10 @@ $chznSpritePath: "chosen-sprite.png";
 
 .chosen-container-multi {
   .chosen-choices {
-    background-color: $chznBackground;
-    border: 1px solid $chznBorder;
-    @include border-radius($chznBorderRadius);
-    @include box-shadow($chznBoxShadow);
+    background-color: $chosenBackground;
+    border: 1px solid $chosenBorder;
+    @include border-radius($chosenBorderRadius);
+    @include box-shadow($chosenBoxShadow);
     cursor: text;
     height: auto !important;
     height: 1%;
@@ -282,7 +285,7 @@ $chznSpritePath: "chosen-sprite.png";
         border: 0 !important;
         @include box-shadow(none);
         color: $gray;
-        height: $chznHeight - 8px;
+        height: $chosenHeight - 8px;
         margin: 0;
         padding: 4px;
         outline: 0;
@@ -298,10 +301,9 @@ $chznSpritePath: "chosen-sprite.png";
          -moz-background-clip: padding;
               background-clip: padding-box;
       background-color: $grayLighter;
-      border: 1px solid $chznBorder;
-      @include border-radius($chznBorderRadius);
-      #gradient > @include vertical($white, $grayLighter);
-      @include box-shadow($chznBoxShadow);
+      border: 1px solid $chosenBorder;
+      @include border-radius($chosenBorderRadius);
+      @include box-shadow($chosenBoxShadow);
       color: $grayDark;
       cursor: default;
       line-height: 13px;
@@ -310,13 +312,13 @@ $chznSpritePath: "chosen-sprite.png";
       position: relative;
 
       .search-choice-close {
-        background: url("${chznSpritePath}") right top no-repeat;
+        background: url("#{$chosenSpritePath}") right top no-repeat;
         display: block;
         font-size: 1px;
-        height: 13px;
+        height: 10px;
         position: absolute;
-        right: 3px;
-        top: 4px;
+        right: 5px;
+        top: 5px;
         width: 12px;
 
         &:hover {
@@ -348,16 +350,16 @@ $chznSpritePath: "chosen-sprite.png";
 
 .chosen-container-active {
   .chosen-single {
-    border: 1px solid $chznFocusBorder;
-    @include box-shadow($chznFocusBoxShadow);
-    @include transition($chznFocusTransition);
+    border: 1px solid $chosenFocusBorder;
+    @include box-shadow($chosenFocusBoxShadow);
+    @include transition($chosenFocusTransition);
   }
 
   &.chosen-with-drop .chosen-single {
     background-color: $grayLighter;
-    border: 1px solid $chznFocusBorder;
-    @include box-shadow($chznFocusBoxShadow);
-    @include transition($chznFocusTransition);
+    border: 1px solid $chosenFocusBorder;
+    @include box-shadow($chosenFocusBoxShadow);
+    @include transition($chosenFocusTransition);
 
     div {
       background: transparent;
@@ -370,15 +372,15 @@ $chznSpritePath: "chosen-sprite.png";
   }
 
   .chosen-choices {
-    border: 1px solid $chznFocusBorder;
+    border: 1px solid $chosenFocusBorder;
     -webkit-border-bottom-left-radius: 0;
     -webkit-border-bottom-right-radius: 0;
        -moz-border-radius-bottomleft: 0;
        -moz-border-radius-bottomright: 0;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
-    @include box-shadow($chznFocusBoxShadow);
-    @include transition($chznFocusTransition);
+    @include box-shadow($chosenFocusBoxShadow);
+    @include transition($chosenFocusTransition);
 
     .search-field input {
       color: #111 !important;
@@ -459,9 +461,8 @@ $chznSpritePath: "chosen-sprite.png";
   }
 
   .chosen-search input {
-    background: url("${chznSpritePath}") no-repeat -38px -22px, $chznBackground;
+    background: url("#{$chosenSpritePath}") no-repeat -38px -22px, $chosenBackground;
     direction: rtl;
     padding: 4px 5px 4px 20px;
   }
 }
-
