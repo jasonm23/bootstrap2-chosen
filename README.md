@@ -22,9 +22,5 @@ the "chosen" class (or chosen-mini, chosen-small, etc) to fix this.
 How you add `bootstrap-chosen.sass` to you build process is up to you. Just keep in mind
 that it needs access to any other required `.sass`.
 
-# Development info 
-
-You'll have to figure that out until I write it up here ;)
-
 License: [MIT](https://en.wikipedia.org/wiki/MIT_License)
 
