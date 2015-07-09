@@ -19,8 +19,8 @@ the "chosen" class (or chosen-mini, chosen-small, etc) to fix this.
 </div>
 ```
 
-How you add `bootstrap-chosen.sass` to you build process is up to you. Just keep in mind
-that it needs access to any other required `.sass`.
+How you add `bootstrap-chosen.scss` to you build process is up to you. Just keep in mind
+that it needs access to any other required `.scss`.
 
 License: [MIT](https://en.wikipedia.org/wiki/MIT_License)
 
